@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!-- author: Albredo Sánchez Alberca (asalber@ceu.es)-->
 
 # Machine Learning Repository
