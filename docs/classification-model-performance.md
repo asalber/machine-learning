@@ -13,6 +13,18 @@ When you are building a predictive model, you need a way to evaluate the capabil
 
 This is typically done by estimating accuracy using data that was not used to train the model such as a test set, or using cross validation. 
 
+There are several measures of performance.
+The most common are:
+
+- Sensitivity: $$Sen=\frac{TP}{TP+FN}$$
+- Specificity: $$Spe=\frac{TN}{FP+TN}$$
+- Positive predicted value: $$PPV=\frac{TP}{TP+FP}$$
+- Negative predicted value: $$NPV=\frac{TN}{FN+TN}$$
+- Precission: Is the same than the positive predicted value.
+- Recall: Is the same than sensitivity.
+- F-measure: $$F=\frac{2Precision\cdot Recall}{Precission+Recall}$$
+- Cohen's Kappa
+
 The [caret]() package in R provides a number of methods to estimate the accuracy of a machines learning clasiffication model.
 
 Here we present 5 methods for estimating model performance:
@@ -61,30 +73,30 @@ confusionMatrix(predictions$class, y_test)
 ##             Reference
 ## Prediction   setosa versicolor virginica
 ##   setosa         10          0         0
-##   versicolor      0         10         0
-##   virginica       0          0        10
+##   versicolor      0         10         1
+##   virginica       0          0         9
 ## 
 ## Overall Statistics
-##                                      
-##                Accuracy : 1          
-##                  95% CI : (0.8843, 1)
-##     No Information Rate : 0.3333     
-##     P-Value [Acc > NIR] : 4.857e-15  
-##                                      
-##                   Kappa : 1          
-##  Mcnemar's Test P-Value : NA         
+##                                           
+##                Accuracy : 0.9667          
+##                  95% CI : (0.8278, 0.9992)
+##     No Information Rate : 0.3333          
+##     P-Value [Acc > NIR] : 2.963e-13       
+##                                           
+##                   Kappa : 0.95            
+##  Mcnemar's Test P-Value : NA              
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: setosa Class: versicolor Class: virginica
-## Sensitivity                 1.0000            1.0000           1.0000
-## Specificity                 1.0000            1.0000           1.0000
-## Pos Pred Value              1.0000            1.0000           1.0000
-## Neg Pred Value              1.0000            1.0000           1.0000
+## Sensitivity                 1.0000            1.0000           0.9000
+## Specificity                 1.0000            0.9500           1.0000
+## Pos Pred Value              1.0000            0.9091           1.0000
+## Neg Pred Value              1.0000            1.0000           0.9524
 ## Prevalence                  0.3333            0.3333           0.3333
-## Detection Rate              0.3333            0.3333           0.3333
-## Detection Prevalence        0.3333            0.3333           0.3333
-## Balanced Accuracy           1.0000            1.0000           1.0000
+## Detection Rate              0.3333            0.3333           0.3000
+## Detection Prevalence        0.3333            0.3667           0.3000
+## Balanced Accuracy           1.0000            0.9750           0.9500
 ```
 
 ## Bootstrap
@@ -120,8 +132,8 @@ print(model)
 ## Resampling results across tuning parameters:
 ## 
 ##   usekernel  Accuracy   Kappa    
-##   FALSE      0.9521991  0.9274902
-##    TRUE      0.9561560  0.9335292
+##   FALSE      0.9480785  0.9211403
+##    TRUE      0.9492459  0.9228698
 ## 
 ## Tuning parameter 'fL' was held constant at a value of 0
 ## Tuning
@@ -176,8 +188,8 @@ print(model)
 ## Resampling results across tuning parameters:
 ## 
 ##   usekernel  Accuracy   Kappa    
-##   FALSE      0.9521991  0.9274902
-##    TRUE      0.9561560  0.9335292
+##   FALSE      0.9480785  0.9211403
+##    TRUE      0.9492459  0.9228698
 ## 
 ## Tuning parameter 'fL' was held constant at a value of 0
 ## Tuning
@@ -220,9 +232,9 @@ print(model)
 ## Summary of sample sizes: 135, 135, 135, 135, 135, 135, ... 
 ## Resampling results across tuning parameters:
 ## 
-##   usekernel  Accuracy   Kappa
-##   FALSE      0.9533333  0.93 
-##    TRUE      0.9600000  0.94 
+##   usekernel  Accuracy   Kappa    
+##   FALSE      0.9555556  0.9333333
+##    TRUE      0.9577778  0.9366667
 ## 
 ## Tuning parameter 'fL' was held constant at a value of 0
 ## Tuning

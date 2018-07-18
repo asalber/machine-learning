@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Estimating performance for Machine Learning classfication models"
+title: "Estimating performance of Machine Learning classfication models"
 author: "Alfredo Sánchez Alberca (asalber@ceu.es)"
 date: "July 2018"
 output: html_document
@@ -14,6 +14,18 @@ knitr::opts_chunk$set(echo = TRUE)
 When you are building a predictive model, you need a way to evaluate the capability of the model on unseen data.
 
 This is typically done by estimating accuracy using data that was not used to train the model such as a test set, or using cross validation. 
+
+There are several measures of performance.
+The most common are:
+
+- Sensitivity: $$Sen=\frac{TP}{TP+FN}$$
+- Specificity: $$Spe=\frac{TN}{FP+TN}$$
+- Positive predicted value: $$PPV=\frac{TP}{TP+FP}$$
+- Negative predicted value: $$NPV=\frac{TN}{FN+TN}$$
+- Precission: Is the same than the positive predicted value.
+- Recall: Is the same than sensitivity.
+- F-measure: $$F=\frac{2Precision\cdot Recall}{Precission+Recall}$$
+- Cohen's Kappa
 
 The [caret]() package in R provides a number of methods to estimate the accuracy of a machines learning clasiffication model.
 
