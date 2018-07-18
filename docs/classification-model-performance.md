@@ -13,7 +13,18 @@ When you are building a predictive model, you need a way to evaluate the capabil
 
 This is typically done by estimating accuracy using data that was not used to train the model such as a test set, or using cross validation. 
 
-There are several measures of performance.
+In order to measure the performance of a classification model on every class, whe have to compute the following values:
+
+- True positives $TP$: Number of instances correctly classified in the class.
+- False positives $FP$: Number of instances wrongly classified in the class.
+- False negatives $FN$: Number of instances wrongly classified out of the class.
+- True negatives $TN$: Number of instances correctly classified out of the class.
+
+Usually this values are summarized in a table like the one below.
+
+![](img/confusion-matrix.jpg)
+
+Using these values, we can define several measures of performance.
 The most common are:
 
 - Sensitivity: $$Sen=\frac{TP}{TP+FN}$$
@@ -73,30 +84,30 @@ confusionMatrix(predictions$class, y_test)
 ##             Reference
 ## Prediction   setosa versicolor virginica
 ##   setosa         10          0         0
-##   versicolor      0         10         1
-##   virginica       0          0         9
+##   versicolor      0          8         1
+##   virginica       0          2         9
 ## 
 ## Overall Statistics
 ##                                           
-##                Accuracy : 0.9667          
-##                  95% CI : (0.8278, 0.9992)
+##                Accuracy : 0.9             
+##                  95% CI : (0.7347, 0.9789)
 ##     No Information Rate : 0.3333          
-##     P-Value [Acc > NIR] : 2.963e-13       
+##     P-Value [Acc > NIR] : 1.665e-10       
 ##                                           
-##                   Kappa : 0.95            
+##                   Kappa : 0.85            
 ##  Mcnemar's Test P-Value : NA              
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: setosa Class: versicolor Class: virginica
-## Sensitivity                 1.0000            1.0000           0.9000
-## Specificity                 1.0000            0.9500           1.0000
-## Pos Pred Value              1.0000            0.9091           1.0000
-## Neg Pred Value              1.0000            1.0000           0.9524
+## Sensitivity                 1.0000            0.8000           0.9000
+## Specificity                 1.0000            0.9500           0.9000
+## Pos Pred Value              1.0000            0.8889           0.8182
+## Neg Pred Value              1.0000            0.9048           0.9474
 ## Prevalence                  0.3333            0.3333           0.3333
-## Detection Rate              0.3333            0.3333           0.3000
-## Detection Prevalence        0.3333            0.3667           0.3000
-## Balanced Accuracy           1.0000            0.9750           0.9500
+## Detection Rate              0.3333            0.2667           0.3000
+## Detection Prevalence        0.3333            0.3000           0.3667
+## Balanced Accuracy           1.0000            0.8750           0.9000
 ```
 
 ## Bootstrap
@@ -132,8 +143,8 @@ print(model)
 ## Resampling results across tuning parameters:
 ## 
 ##   usekernel  Accuracy   Kappa    
-##   FALSE      0.9480785  0.9211403
-##    TRUE      0.9492459  0.9228698
+##   FALSE      0.9480310  0.9211771
+##    TRUE      0.9519791  0.9271880
 ## 
 ## Tuning parameter 'fL' was held constant at a value of 0
 ## Tuning
@@ -188,8 +199,8 @@ print(model)
 ## Resampling results across tuning parameters:
 ## 
 ##   usekernel  Accuracy   Kappa    
-##   FALSE      0.9480785  0.9211403
-##    TRUE      0.9492459  0.9228698
+##   FALSE      0.9480310  0.9211771
+##    TRUE      0.9519791  0.9271880
 ## 
 ## Tuning parameter 'fL' was held constant at a value of 0
 ## Tuning

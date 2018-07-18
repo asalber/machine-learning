@@ -15,7 +15,18 @@ When you are building a predictive model, you need a way to evaluate the capabil
 
 This is typically done by estimating accuracy using data that was not used to train the model such as a test set, or using cross validation. 
 
-There are several measures of performance.
+In order to measure the performance of a classification model on every class, whe have to compute the following values:
+
+- True positives $TP$: Number of instances correctly classified in the class.
+- False positives $FP$: Number of instances wrongly classified in the class.
+- False negatives $FN$: Number of instances wrongly classified out of the class.
+- True negatives $TN$: Number of instances correctly classified out of the class.
+
+Usually this values are summarized in a table like the one below.
+
+![](img/confusion-matrix.jpg)
+
+Using these values, we can define several measures of performance.
 The most common are:
 
 - Sensitivity: $$Sen=\frac{TP}{TP+FN}$$
