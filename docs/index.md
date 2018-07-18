@@ -20,6 +20,7 @@ This repository contains a bunch of references, courses, recipes, programming li
 ## Recipes
 
 - [Google AI](https://ai.google/)
+- [Estimating performance of Machine Learning classification models](classification-model-performance.html)
 
 ## Programming languages
 
