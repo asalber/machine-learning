@@ -9,6 +9,7 @@ This repository contains a bunch of references, courses, recipes, programming li
 
 ## References
 
+- [Hastie, T., Tibshirani, R.,, Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction.. Springer](https://web.stanford.edu/~hastie/ElemStatLearn/)
 - https://www.kdnuggets.com/2018/02/tour-top-10-algorithms-machine-learning-newbies.html
 - https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5
 - http://www.cs.uvm.edu/~icdm/algorithms/10Algorithms-08.pdf
