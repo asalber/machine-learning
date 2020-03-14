@@ -17,6 +17,7 @@ This repository contains a bunch of references, courses, recipes, programming li
 ## Courses and tutorials
 
 - [Google Machine Learning Crash course](https://developers.google.com/machine-learning/crash-course/)
+- [Zero to mastery in Machine Learning](https://github.com/mrdbourke/zero-to-mastery-ml)Complete Machine Learning and Data Science: Zero to Mastery course.Learn Data Science, Data Analysis, Machine Learning (Artificial Intelligence) and Python with Tensorflow, Pandas & more!
 
 ## Recipes
 
