@@ -18,6 +18,7 @@ This repository contains a bunch of references, courses, recipes, programming li
 
 - [Google Machine Learning Crash course](https://developers.google.com/machine-learning/crash-course/)
 - [Zero to mastery in Machine Learning](https://github.com/mrdbourke/zero-to-mastery-ml)Complete Machine Learning and Data Science: Zero to Mastery course.Learn Data Science, Data Analysis, Machine Learning (Artificial Intelligence) and Python with Tensorflow, Pandas & more!
+- [Intro to machine learning with tidyverse](https://github.com/rstudio-conf-2020/intro-to-ml-tidy)  Tutorial about how to train, assess, and generate predictions from several common machine learning methods with the tidymodels suite of packages.
 
 ## Recipes
 
@@ -39,6 +40,7 @@ This repository contains a bunch of references, courses, recipes, programming li
 - [nnet](https://cran.r-project.org/web/packages/nnet/) Feed-forward Neural Networks and Multinomial Log-Linear Models.
 - [randomForest](https://cran.r-project.org/web/packages/randomForest/) Breiman and Cutler's random forests for classification and regression.
 - [e1071](https://cran.r-project.org/web/packages/e1071/) Functions for latent class analysis, short time Fourier transform, fuzzy clustering, support vector machines, shortest path computation, bagged clustering, naive Bayes classifier, etc.
+
 
 ### Javascript
 
