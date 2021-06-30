@@ -13,6 +13,7 @@ This repository contains a bunch of references, courses, recipes, programming li
 ## Courses and tutorials
 
 - [Google Machine Learning Crash course](https://developers.google.com/machine-learning/crash-course/)
+- [](https://csinva.github.io/pres/189/#/)
 
 ## Recipes
 
